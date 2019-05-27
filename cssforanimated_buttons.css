@@ -1,0 +1,121 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+body {
+	overflow-x: hidden;
+}
+.Main_Section {
+	height: 100vh;
+	background-color: #8e44ad;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.menu-button {
+	display: block;
+	height: 100px;
+	width: 100px;
+	background-color: #fff;
+	border-radius: 50%;
+	position: relative;
+	margin-right: 30px;
+	margin-left: 30px;
+}
+
+.menu-button span,
+.menu-button span::before,
+.menu-button span::after {
+	position: absolute;
+	height: 2px;
+	width: 60px;
+	top: 50%;
+	left: 50%;
+	margin-top: -1px;
+	margin-left: -30px;	
+	background-color: #34495e;
+	transition: 0.3s;
+}
+.menu-button span:before, .menu-button span:after {
+	content: '';
+	background-color: #3498db;
+}
+.menu-button span {
+	background-color: green;
+}
+.menu-button span::before {
+	transform: translateY(15px);
+}
+.menu-button span::after {
+	transform: translateY(-15px);
+}
+.menu-button_active span {
+	height: 0;
+}
+.menu-button_active span::before {
+	transition: 0.3s;
+	transform: rotate(45deg);
+}
+.menu-button_active span::after {
+	transition: 0.3s;
+	transform: rotate(-45deg);
+}
+
+
+
+.Second_Button span {
+	position: absolute;
+	height: 2px;
+	width: 60px;
+	top: 50%;
+	left: 50%;
+	margin-top: -1px;
+	margin-left: -30px;	
+	background-color: green;
+	transition: 0.3s;
+}
+.Second_Button_active span {
+	width: 58px;
+	margin-left: -28px;
+}
+.Second_Button_active span::before {
+	transition: 0.3s;
+	transform: rotate(35deg);
+	transform-origin: left bottom;
+	width: 40px;
+	border-bottom-right-radius: 50px;
+	border-bottom-left-radius: 40px;
+}
+.Second_Button_active span::after {
+	transition: 0.3s;
+	transform: rotate(-35deg);
+	transform-origin: left top;
+	width: 40px;
+	border-top-right-radius: 50px;
+	border-top-left-radius: 40px;
+}
+.Third_Section_acitve {
+	width: 58px;
+	margin-left: -28px;
+}
+.Third_Button_active span::before {
+	transition: 0.3s;
+	transform: rotate(35deg);
+	transform-origin: right bottom;
+	width: 40px;
+	border-bottom-right-radius: 50px;
+	border-bottom-left-radius: 40px;
+	transform: translateX(10px);
+}
+.Third_Button_active span::after {
+	transition: 0.3s;
+	transform: rotate(-35deg);
+	transform-origin: right top;
+	width: 40px;
+	border-top-right-radius: 50px;
+	border-top-left-radius: 40px;
+	transform: translateX(10px);
+}
